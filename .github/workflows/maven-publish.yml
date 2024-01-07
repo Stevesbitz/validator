@@ -4,8 +4,10 @@
 name: Maven Package
 
 on:
-  release:
-    types: [created]
+  push:
+    paths:
+      - "src/main/java/com/iteesoft/validator/**"
+      - ".github/.workflows/maven-publish.yaml"
 
 jobs:
   build:
